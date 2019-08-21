@@ -1,1 +1,2 @@
-# UCICyber-Scripting-Host-Based-IDS
+# ZotDefender
+A Windows/Linux IDS

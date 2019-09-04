@@ -84,7 +84,7 @@ function Show-commonlogs{
 function Get-commonlogs{
 
     
-    Write-Host " AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" -ForegroundColor Red
+    Write-Host "AA" -ForegroundColor Red
 
 
 }
@@ -100,25 +100,71 @@ function Query-log{
     
     )
 
-    if($Type -ne "Security" -or $Type -ne "System" -or $Type -ne "sec" -or $Type -ne "sys"){
+    while($Type -ne "Security" -and $Type -ne "System" -and $Type -ne "sec" -and $Type -ne "sys"){
         $Type = "Security"
         $Type = Read-Host -Prompt "System or Security logs?[security]"
+        if($type -eq ""){$type = "security"}
     }
 
     if($Type -eq "sys"){$Type="system"}
     if($Type -eq "sec"){$Type="security"}
 
-    
     $EventID = ""
-    while($EventID -ne ""){
+    while($EventID -eq ""){
     
         $EventID = Read-Host -Prompt "Enter an EventID `n------------------`n>"
-    
     }
 
+    #Get-WinEvent -logname "security
 
-    Get-WinEvent -LogName "system" 
-    Get-WinEvent -FilterHashTable @{LogName = 'System';ID ='7045'}
+    #$sh = new-object -com 'Shell.Application'
+
+    #$sh.ShellExecute('powershell', "-Noexit -Command 'dir'", 'runas')
+
+    $hash = @{}
+
+    $hash.add("ID",4720)
+
+    #this works
+    $temp1 = @{ID=$EventID}
+    $temp2 = @{ID=4720}
+
+    start-process powershell "-NoExit Get-WinEvent -logname $Type -MaxEvents 200 -FilterHashtable @{Logname = $type}" -verb runas
+    #start-process powershell "Get-WinEvent -logname $Type -MaxEvents 200 -FilterHashtable @{Logname = $type}" -verb runas
+    #start-process powershell "-noexit Get-WinEvent  -FilterHashtable @{Logname = $type}" -verb runas
+
+    $temp = @{LogName =$Type;ID = $EventID}
+
+    #$temp = @{Logname="security";ID=4720}
+
+    $temp
+
+    #start-process powershell.exe "-noexit wevtutil qe security /q:`"*[System[(EventID=4720)]]`" /c:10 /rd:true /f:text" -verb runas
+    #start-process powershell.exe "-noexit Get-EventLog -LogName $Type -InstanceId $EventID -Newest 15" -Verb runas
+
+                        
+
+    Invoke-Command "ls"
+    
+    Sleep 5
+
+
+    
+
+    #start-process powershell "-noexit Get-WinEvent -logname $type " -verb runas
+    
+    #start-process powershell '-noexit Get-WinEvent -FilterHashtable $temp' -verb runas
+
+    #start-process powershell '-noexit Get-WinEvent -FilterHashtable @{LogName =$Type;ID = $EventID} -ComputerName localhost -MaxEvents 15' -verb runas
+
+    #$sh.ShellExecute('powershell', "-Command 'Get-WinEvent -Logname security -Maxevents 5 '", 'runas')
+
+    #Get-WinEvent -FilterHashtable @{LogName = $type;ID = $EventID} -ComputerName localhost -MaxEvents 15 -Credential Get-Credential
+
+    #Start-process powershell.exe 
+    
+    #Get-WinEvent -LogName "system" 
+    #Get-WinEvent -FilterHashTable @{LogName = 'System';ID ='7045'}
 
 
 }
@@ -127,6 +173,16 @@ function autorun{
 
     Write-Host "Scanning for suspicious event IDs..."
 
+}
+
+
+#function that prints out available options
+function help{
+    
+    Write-Host "`nOptions`n--------
+    Show-CommonLogs : prints out a list of common events that are IOCs
+    Query-log       : guided prompt for the user to enter a log to search for
+    autorun         : runs automatically to constantly check for IOCs in the Security and system event logs"
 
 }
 
@@ -138,8 +194,8 @@ function autorun{
 #function to ask user what they want to do
 while($true){
 
-
-    $command = Read-Host -Prompt ">"
+    echo ""
+    $command = Read-Host -Prompt "Event log checker>"
 
     if($command -eq "exit" -or $command -eq "q" -or $command -eq "logout")
     {
@@ -147,6 +203,7 @@ while($true){
     }
 
     &$command
+    
 
 }
 
@@ -158,3 +215,20 @@ while($true){
 
 
 #wevtutil qe security /q:
+
+'''
+The valid Get-WinEvent key/value pairs are as follows:
+
+    LogName=<String[]>
+    ProviderName=<String[]>
+    Path=<String[]>
+    Keywords=<Long[]>
+    ID=<Int32[]>
+    Level=<Int32[]>
+    StartTime=<DateTime>
+    EndTime=<DateTime>
+    UserID=<SID>
+    Data=<String[]>
+    (Asterisk) *=<String[]>
+
+    '''

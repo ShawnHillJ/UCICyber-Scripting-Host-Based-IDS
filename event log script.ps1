@@ -129,7 +129,7 @@ function Query-log{
     $temp1 = @{ID=$EventID}
     $temp2 = @{ID=4720}
 
-    start-process powershell "-NoExit Get-WinEvent -logname $Type -MaxEvents 200 -FilterHashtable @{Logname = $type}" -verb runas
+    #start-process powershell "-NoExit Get-WinEvent -logname $Type -MaxEvents 200 -FilterHashtable @{Logname = $type}" -verb runas
     #start-process powershell "Get-WinEvent -logname $Type -MaxEvents 200 -FilterHashtable @{Logname = $type}" -verb runas
     #start-process powershell "-noexit Get-WinEvent  -FilterHashtable @{Logname = $type}" -verb runas
 
@@ -140,7 +140,8 @@ function Query-log{
     $temp
 
     #start-process powershell.exe "-noexit wevtutil qe security /q:`"*[System[(EventID=4720)]]`" /c:10 /rd:true /f:text" -verb runas
-    #start-process powershell.exe "-noexit Get-EventLog -LogName $Type -InstanceId $EventID -Newest 15" -Verb runas
+    
+    start-process powershell.exe "-noexit Get-EventLog -LogName $Type -InstanceId $EventID -Newest 15" -Verb runas
 
                         
 
@@ -182,9 +183,16 @@ function help{
     Write-Host "`nOptions`n--------
     Show-CommonLogs : prints out a list of common events that are IOCs
     Query-log       : guided prompt for the user to enter a log to search for
-    autorun         : runs automatically to constantly check for IOCs in the Security and system event logs"
+    autorun         : runs automatically to constantly check for IOCs in the Security and system event logs
+    Setup-Logs      : Sets up events to be logged if they are not being logged already
+    Check-Logs      : Checks to see if common logs (security and system logs) are enabled and configured"
+    
 
 }
+
+
+#Function For checking to see if System and Security logs are enabled
+function 
 
 #-FilterHashTable @{LogName = ', type_of_log,';ID =', event_ID, '}
 
@@ -232,3 +240,20 @@ The valid Get-WinEvent key/value pairs are as follows:
     (Asterisk) *=<String[]>
 
     '''
+
+
+
+#Maybe use secure strings to transport stuff?
+
+#New-WinEvent (Creates a new windows log)
+
+#new-eventlog
+
+#set-logproperties
+#show-eventlog
+#set-AutologgerConfig
+
+#configuring logs should be easier in a .net language
+
+
+#This didn't work

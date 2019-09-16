@@ -25,12 +25,32 @@ Partial Class ZotDefender
         Me.components = New System.ComponentModel.Container()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -45,32 +65,14 @@ Partial Class ZotDefender
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button14 = New System.Windows.Forms.Button()
+        Me.EventLog1 = New System.Diagnostics.EventLog()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -93,6 +95,58 @@ Partial Class ZotDefender
         Me.TabPage3.Text = "IDS, Logs and Events"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(323, 49)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(75, 23)
+        Me.Button14.TabIndex = 15
+        Me.Button14.Text = "Browse..."
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(132, 51)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox8.TabIndex = 14
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(28, 54)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(98, 13)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "Specify Log Folder:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(62, 89)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(209, 13)
+        Me.Label10.TabIndex = 12
+        Me.Label10.Text = "Note: Programs will open in a new window."
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(44, 351)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(258, 23)
+        Me.Button13.TabIndex = 11
+        Me.Button13.Text = "Deploy Event Logger"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(44, 322)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(258, 23)
+        Me.Button12.TabIndex = 10
+        Me.Button12.Text = "Deploy Connection Logger"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.TextBox7)
@@ -105,6 +159,132 @@ Partial Class ZotDefender
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Utility / QoL Functions"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(452, 60)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(292, 182)
+        Me.TextBox7.TabIndex = 2
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(449, 44)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "Description"
+        '
+        'Panel2
+        '
+        Me.Panel2.AutoScroll = True
+        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.Button11)
+        Me.Panel2.Controls.Add(Me.Button10)
+        Me.Panel2.Controls.Add(Me.Button9)
+        Me.Panel2.Controls.Add(Me.Button8)
+        Me.Panel2.Controls.Add(Me.Button7)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Button6)
+        Me.Panel2.Controls.Add(Me.Button5)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Location = New System.Drawing.Point(27, 32)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(355, 353)
+        Me.Panel2.TabIndex = 0
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(44, 144)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(258, 23)
+        Me.Button11.TabIndex = 9
+        Me.Button11.Text = "View Installed Programs"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(44, 115)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(258, 23)
+        Me.Button10.TabIndex = 8
+        Me.Button10.Text = "View NonNative Processes"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(44, 86)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(258, 23)
+        Me.Button9.TabIndex = 7
+        Me.Button9.Text = "Change All User Passwords..."
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(44, 57)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(258, 23)
+        Me.Button8.TabIndex = 6
+        Me.Button8.Text = "LDAP Quick Setup"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(44, 28)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(258, 23)
+        Me.Button7.TabIndex = 5
+        Me.Button7.Text = "Get File Hashes..."
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(156, 12)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Utilities"
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(44, 373)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(258, 23)
+        Me.Button6.TabIndex = 3
+        Me.Button6.Text = "Event Viewer"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(44, 344)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(258, 23)
+        Me.Button5.TabIndex = 2
+        Me.Button5.Text = "Group Policy Editor"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(144, 289)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "Shortcuts"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(44, 315)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(258, 23)
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "Firewall with Advanced Security"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
@@ -166,6 +346,14 @@ Partial Class ZotDefender
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(341, 284)
         Me.Panel1.TabIndex = 4
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(12, 169)
+        Me.TextBox6.Multiline = True
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(321, 101)
+        Me.TextBox6.TabIndex = 8
         '
         'TextBox5
         '
@@ -280,191 +468,9 @@ Partial Class ZotDefender
         'ToolTip1
         '
         '
-        'TextBox6
+        'EventLog1
         '
-        Me.TextBox6.Location = New System.Drawing.Point(12, 169)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(321, 101)
-        Me.TextBox6.TabIndex = 8
-        '
-        'Panel2
-        '
-        Me.Panel2.AutoScroll = True
-        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel2.Controls.Add(Me.Button11)
-        Me.Panel2.Controls.Add(Me.Button10)
-        Me.Panel2.Controls.Add(Me.Button9)
-        Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Controls.Add(Me.Button7)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Button6)
-        Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Location = New System.Drawing.Point(27, 32)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(355, 353)
-        Me.Panel2.TabIndex = 0
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(44, 315)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(258, 23)
-        Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Firewall with Advanced Security"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(144, 289)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 13)
-        Me.Label7.TabIndex = 1
-        Me.Label7.Text = "Shortcuts"
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(44, 344)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(258, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Group Policy Editor"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(44, 373)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(258, 23)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Event Viewer"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(156, 12)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 13)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Utilities"
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(44, 28)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(258, 23)
-        Me.Button7.TabIndex = 5
-        Me.Button7.Text = "Get File Hashes..."
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(44, 57)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(258, 23)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "LDAP Quick Setup"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(44, 86)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(258, 23)
-        Me.Button9.TabIndex = 7
-        Me.Button9.Text = "Change All User Passwords..."
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(44, 115)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(258, 23)
-        Me.Button10.TabIndex = 8
-        Me.Button10.Text = "View NonNative Processes"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(44, 144)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(258, 23)
-        Me.Button11.TabIndex = 9
-        Me.Button11.Text = "View Installed Programs"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(449, 44)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 13)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Description"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(452, 60)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(292, 182)
-        Me.TextBox7.TabIndex = 2
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(44, 322)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(258, 23)
-        Me.Button12.TabIndex = 10
-        Me.Button12.Text = "Deploy Connection Logger"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(44, 351)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(258, 23)
-        Me.Button13.TabIndex = 11
-        Me.Button13.Text = "Deploy Event Logger"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(62, 89)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(209, 13)
-        Me.Label10.TabIndex = 12
-        Me.Label10.Text = "Note: Programs will open in a new window."
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(28, 54)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(98, 13)
-        Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Specify Log Folder:"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(132, 51)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox8.TabIndex = 14
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(323, 49)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(75, 23)
-        Me.Button14.TabIndex = 15
-        Me.Button14.Text = "Browse..."
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.EventLog1.SynchronizingObject = Me
         '
         'ZotDefender
         '
@@ -478,12 +484,13 @@ Partial Class ZotDefender
         Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -529,4 +536,5 @@ Partial Class ZotDefender
     Friend WithEvents Button12 As Button
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents EventLog1 As EventLog
 End Class

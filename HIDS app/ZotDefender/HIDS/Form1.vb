@@ -12,9 +12,56 @@ Public Class ZotDefender
 
     Private psi As ProcessStartInfo
     Private cmd As Process
+    Private display_area As TextBox
     Private Delegate Sub InvokeWithString(ByVal text As String)
 
+    Private Sub Execute_Script_and_Output_String(ByVal command As String, ByRef text_object As TextBox)
+        Try
+            cmd.Kill()
+        Catch ex As Exception
+        End Try
 
+
+        text_object.Clear()
+        display_area = text_object
+
+        psi = New ProcessStartInfo(TextBox1.Text)
+
+        Dim outputs As New System.Collections.Generic.List(Of String)
+        Dim output_errors As New System.Collections.Generic.List(Of String)
+
+        Dim systemencoding As System.Text.Encoding
+        System.Text.Encoding.GetEncoding(Globalization.CultureInfo.CurrentUICulture.TextInfo.OEMCodePage)
+
+        With psi
+            .UseShellExecute = False
+            .RedirectStandardError = True
+            .RedirectStandardOutput = True
+            .RedirectStandardInput = True
+            .CreateNoWindow = False
+            .StandardOutputEncoding = systemencoding
+            .StandardErrorEncoding = systemencoding
+        End With
+
+        cmd = New Process With {.StartInfo = psi, .EnableRaisingEvents = True}
+
+        AddHandler cmd.ErrorDataReceived, AddressOf Async_Data_Received
+        AddHandler cmd.OutputDataReceived, AddressOf Async_Data_Received
+
+        cmd.Start()
+        cmd.BeginOutputReadLine()
+        cmd.BeginErrorReadLine()
+    End Sub
+
+    Private Sub Async_Data_Received(ByVal sender As Object, ByVal e As DataReceivedEventArgs)
+        Me.Invoke(New InvokeWithString(AddressOf Sync_Output), e.Data)
+    End Sub
+
+
+    Private Sub Sync_Output(ByVal text As String)
+        display_area.AppendText(text & Environment.NewLine)
+        display_area.ScrollToCaret()
+    End Sub
 
     Private Sub ZotDefender_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -87,14 +134,14 @@ Public Class ZotDefender
 
     End Sub
 
-    Private Sub Async_Data_Received(ByVal sender As Object, ByVal e As DataReceivedEventArgs)
-        Me.Invoke(New InvokeWithString(AddressOf Sync_Output), e.Data)
-    End Sub
+    'Private Sub Async_Data_Received(ByVal sender As Object, ByVal e As DataReceivedEventArgs)
+    'Me.Invoke(New InvokeWithString(AddressOf Sync_Output), e.Data)
+    'End Sub
 
-    Private Sub Sync_Output(ByVal text As String)
-        TextBox6.AppendText(text & Environment.NewLine)
-        TextBox6.ScrollToCaret()
-    End Sub
+    'Private Sub Sync_Output(ByVal text As String)
+    '   TextBox6.AppendText(text & Environment.NewLine)
+    '    TextBox6.ScrollToCaret()
+    'End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 

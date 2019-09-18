@@ -51,21 +51,12 @@ Partial Class ZotDefender
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -165,6 +156,7 @@ Partial Class ZotDefender
         Me.TextBox7.Location = New System.Drawing.Point(452, 60)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(292, 182)
         Me.TextBox7.TabIndex = 2
         '
@@ -252,7 +244,7 @@ Partial Class ZotDefender
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(44, 373)
+        Me.Button6.Location = New System.Drawing.Point(43, 267)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(258, 23)
         Me.Button6.TabIndex = 3
@@ -261,7 +253,7 @@ Partial Class ZotDefender
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(44, 344)
+        Me.Button5.Location = New System.Drawing.Point(43, 238)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(258, 23)
         Me.Button5.TabIndex = 2
@@ -271,7 +263,7 @@ Partial Class ZotDefender
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(144, 289)
+        Me.Label7.Location = New System.Drawing.Point(143, 183)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 13)
         Me.Label7.TabIndex = 1
@@ -279,7 +271,7 @@ Partial Class ZotDefender
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(44, 315)
+        Me.Button4.Location = New System.Drawing.Point(43, 209)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(258, 23)
         Me.Button4.TabIndex = 0
@@ -331,17 +323,7 @@ Partial Class ZotDefender
         '
         Me.Panel1.BackColor = System.Drawing.Color.Silver
         Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(5, 58)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(341, 284)
@@ -349,65 +331,12 @@ Partial Class ZotDefender
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(12, 169)
+        Me.TextBox6.Location = New System.Drawing.Point(12, 38)
         Me.TextBox6.Multiline = True
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(321, 101)
+        Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox6.Size = New System.Drawing.Size(321, 232)
         Me.TextBox6.TabIndex = 8
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(105, 143)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(228, 20)
-        Me.TextBox5.TabIndex = 10
-        Me.TextBox5.Text = "Click ""Grab Inventory"""
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(105, 116)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(228, 20)
-        Me.TextBox4.TabIndex = 9
-        Me.TextBox4.Text = "Click ""Grab Inventory"""
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(105, 90)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(228, 20)
-        Me.TextBox3.TabIndex = 8
-        Me.TextBox3.Text = "Click ""Grab Inventory"""
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 146)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(93, 13)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Domain Controller:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 119)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "IP Address:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 93)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 13)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Server Config:"
         '
         'Label3
         '
@@ -415,44 +344,9 @@ Partial Class ZotDefender
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(111, 11)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 13)
+        Me.Label3.Size = New System.Drawing.Size(94, 13)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "System Information"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 41)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Host Name:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(105, 64)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(228, 20)
-        Me.TextBox2.TabIndex = 3
-        Me.TextBox2.Text = "Click ""Grab Inventory"""
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(105, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 20)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "Click ""Grab Inventory"""
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 67)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "OS Type:"
+        Me.Label3.Text = "Console Output"
         '
         'TabControl1
         '
@@ -502,17 +396,7 @@ Partial Class ZotDefender
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ToolTip2 As ToolTip
@@ -537,4 +421,5 @@ Partial Class ZotDefender
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents EventLog1 As EventLog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

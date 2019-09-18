@@ -1,0 +1,8 @@
+#TYPE Microsoft.Powershell.Utility.FileHash
+"Algorithm","Hash","Path"
+"MD5","DE4824B41F4EF9FCE29ED5B520E14A5A","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\hashes1.csv"
+"MD5","E086F2E7253971F4FBBB4A32F4BF5841","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\hashes1.txt"
+"MD5","F994C75FF364398914528332A6D8557E","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\HIDS.exe"
+"MD5","F7CC56355E720DC7A1685C358B9B3A6B","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\HIDS.pdb"
+"MD5","E0205E2A42B1FCB5DD7D0696E7F35AB7","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\HIDS.xml"
+"MD5","3BAB25A3E651A9E4A00473D2257B99F9","C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\OpenFileDialog1"

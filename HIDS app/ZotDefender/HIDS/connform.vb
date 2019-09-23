@@ -4,8 +4,8 @@ Public Class connform
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim table = DataGridView1
         Dim list = ListBox2
-        Dim lfilep As String = "C:\Users\Admin\Desktop\log.txt"
-        Dim bfilep As String = "C:\Users\Admin\Desktop\list.txt"
+        Dim lfilep As String = "C:\Users\Devastator\Documents\git\ZotDefender\log.txt"
+        Dim bfilep As String = "C:\Users\Devastator\Documents\git\ZotDefender\list.txt"
         Dim btitle = TextBox1
         btitle.AppendText("Blocked Hosts")
         btitle.ReadOnly = True

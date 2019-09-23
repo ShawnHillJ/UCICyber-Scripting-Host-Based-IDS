@@ -9,3 +9,4 @@ C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debu
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.exe
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.xml
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.pdb
+C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.Form2.resources

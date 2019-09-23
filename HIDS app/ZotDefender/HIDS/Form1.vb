@@ -207,13 +207,40 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Execute_Command("powershell C:\Users\Devastator\Documents\git\ZotDefender\File_hasher.ps1")
+        Form2.Show()
+
+        'Execute_Command("powershell C:\Users\Devastator\Documents\git\ZotDefender\File_hasher.ps1")
     End Sub
 
     Private Sub Button7_MouseOver(sender As Object, e As EventArgs) Handles Button7.MouseHover
         TextBox7.Text = "Opens an interactive powershell prompt to grab file hashes"
 
 
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        connform.Show()
+    End Sub
+
+
+    Private Sub EventLog2_EntryWritten(sender As Object, e As EntryWrittenEventArgs) Handles EventLog2.EntryWritten
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+    End Sub
+
+    Private Sub Button8_MouseOver(sender As Object, e As EventArgs) Handles Button8.MouseHover
+        TextBox7.Text = "Launches the GUI setup to create an instance of an LDAP Server. Only works on Windows Server."
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+    End Sub
+
+    Private Sub Button9_MouseOver(sender As Object, e As EventArgs) Handles Button9.MouseHover
+        TextBox7.Text = "Launches a window to change user passwords on the local machine."
     End Sub
 
 End Class

@@ -105,6 +105,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="connform.resx">
+      <DependentUpon>connform.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="File_Hasher.resx">
       <DependentUpon>File_Hasher.vb</DependentUpon>
     </EmbeddedResource>

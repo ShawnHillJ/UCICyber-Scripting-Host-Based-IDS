@@ -45,7 +45,7 @@ Public Class ZotDefender
             .RedirectStandardError = True
             .RedirectStandardOutput = True
             .RedirectStandardInput = True
-            .CreateNoWindow = False
+            .CreateNoWindow = True
             .StandardOutputEncoding = systemencoding
             .StandardErrorEncoding = systemencoding
         End With
@@ -169,7 +169,27 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Execute_Command("powershell wf.msc")
+    End Sub
 
+    Private Sub Button4_MouseHover(sender As Object, e As EventArgs) Handles Button4.MouseHover
+        TextBox7.Text = "Opens the Firewall with Advanced Security Window."
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Execute_Command("powershell gpedit.msc")
+    End Sub
+
+    Private Sub Button5_MouseHover(sender As Object, e As EventArgs) Handles Button5.MouseHover
+        TextBox7.Text = "Opens the Group Policy Editor. (Windows Server)"
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Execute_Command("powershell eventvwr.msc")
+    End Sub
+
+    Private Sub Button6_MouseHover(sender As Object, e As EventArgs) Handles Button6.MouseHover
+        TextBox7.Text = "Opens the Event Viewer."
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
@@ -242,5 +262,22 @@ Public Class ZotDefender
     Private Sub Button9_MouseOver(sender As Object, e As EventArgs) Handles Button9.MouseHover
         TextBox7.Text = "Launches a window to change user passwords on the local machine."
     End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+
+    End Sub
+
+    Private Sub Button10_MouseOver(sender As Object, e As EventArgs) Handles Button10.MouseHover
+        TextBox7.Text = "Displays a list of processes running that are not part of the native Windows library of processes."
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+
+    End Sub
+
+    Private Sub Button11_MouseOver(sender As Object, e As EventArgs) Handles Button11.MouseHover
+        TextBox7.Text = "Displays a list of intalled programs on the machine."
+    End Sub
+
 
 End Class

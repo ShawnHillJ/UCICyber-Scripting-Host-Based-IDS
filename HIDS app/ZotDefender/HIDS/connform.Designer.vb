@@ -27,7 +27,6 @@ Partial Class connform
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.logdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Source = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,9 +35,10 @@ Partial Class connform
         Me.destport = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.state = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -90,15 +90,6 @@ Partial Class connform
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(545, 342)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.ListBox1)
-        Me.Panel1.Location = New System.Drawing.Point(257, 43)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(545, 342)
-        Me.Panel1.TabIndex = 5
         '
         'Status
         '
@@ -156,6 +147,15 @@ Partial Class connform
         Me.pid.Name = "pid"
         Me.pid.Width = 50
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.ListBox1)
+        Me.Panel1.Location = New System.Drawing.Point(257, 43)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(545, 342)
+        Me.Panel1.TabIndex = 5
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.TextBox1)
@@ -165,6 +165,13 @@ Partial Class connform
         Me.Panel2.Size = New System.Drawing.Size(179, 342)
         Me.Panel2.TabIndex = 6
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
+        Me.TextBox1.TabIndex = 1
+        '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
@@ -173,24 +180,18 @@ Partial Class connform
         Me.ListBox2.Size = New System.Drawing.Size(179, 316)
         Me.ListBox2.TabIndex = 0
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Form1
+        'connform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(846, 530)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Name = "Form1"
+        Me.Name = "connform"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

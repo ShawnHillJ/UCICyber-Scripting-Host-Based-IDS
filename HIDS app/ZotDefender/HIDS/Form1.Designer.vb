@@ -124,6 +124,7 @@ Partial Class ZotDefender
         '
         'Button13
         '
+        Me.Button13.Enabled = False
         Me.Button13.Location = New System.Drawing.Point(44, 351)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(258, 23)
@@ -207,7 +208,7 @@ Partial Class ZotDefender
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(258, 23)
         Me.Button10.TabIndex = 8
-        Me.Button10.Text = "View NonNative Processes"
+        Me.Button10.Text = "View Non-Native Processes"
         Me.Button10.UseVisualStyleBackColor = False
         '
         'Button9

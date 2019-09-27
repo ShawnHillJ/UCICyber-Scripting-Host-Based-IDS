@@ -45,7 +45,7 @@ Public Class ZotDefender
             .RedirectStandardError = True
             .RedirectStandardOutput = True
             .RedirectStandardInput = True
-            .CreateNoWindow = True
+            .CreateNoWindow = False
             .StandardOutputEncoding = systemencoding
             .StandardErrorEncoding = systemencoding
         End With
@@ -247,16 +247,16 @@ Public Class ZotDefender
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button8_MouseOver(sender As Object, e As EventArgs) Handles Button8.MouseHover
+    Private Sub Button8_MouseOver(sender As Object, e As EventArgs)
         TextBox7.Text = "Launches the GUI setup to create an instance of an LDAP Server. Only works on Windows Server."
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-
+        Execute_Command("powershell C:\Blue_Team\Change-All-User-Passwords.ps1")
     End Sub
 
     Private Sub Button9_MouseOver(sender As Object, e As EventArgs) Handles Button9.MouseHover
@@ -264,7 +264,7 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-
+        Execute_Command("powershell C:\Blue_Team\Get-NonNative-Process.ps1")
     End Sub
 
     Private Sub Button10_MouseOver(sender As Object, e As EventArgs) Handles Button10.MouseHover
@@ -272,12 +272,18 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-
+        Execute_Command("powershell C:\Blue_Team\Get-Installed-Programs.ps1")
     End Sub
 
     Private Sub Button11_MouseOver(sender As Object, e As EventArgs) Handles Button11.MouseHover
         TextBox7.Text = "Displays a list of intalled programs on the machine."
     End Sub
 
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Execute_Command("powershell C:\Blue_Team\Remove-Vulnerable-Programs.psm1")
+    End Sub
 
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+
+    End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ZotDefender
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ZotDefender
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -38,7 +38,6 @@ Partial Class ZotDefender
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -58,15 +57,16 @@ Partial Class ZotDefender
         Me.EventLog1 = New System.Diagnostics.EventLog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.EventLog2 = New System.Diagnostics.EventLog()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.TabPage3.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        Me.Panel2.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.Panel1.SuspendLayout
+        Me.TabControl1.SuspendLayout
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EventLog2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'OpenFileDialog1
         '
@@ -176,10 +176,10 @@ Partial Class ZotDefender
         '
         Me.Panel2.AutoScroll = True
         Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel2.Controls.Add(Me.Button15)
         Me.Panel2.Controls.Add(Me.Button11)
         Me.Panel2.Controls.Add(Me.Button10)
         Me.Panel2.Controls.Add(Me.Button9)
-        Me.Panel2.Controls.Add(Me.Button8)
         Me.Panel2.Controls.Add(Me.Button7)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Button6)
@@ -194,7 +194,7 @@ Partial Class ZotDefender
         'Button11
         '
         Me.Button11.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button11.Location = New System.Drawing.Point(44, 144)
+        Me.Button11.Location = New System.Drawing.Point(44, 115)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(258, 23)
         Me.Button11.TabIndex = 9
@@ -204,7 +204,7 @@ Partial Class ZotDefender
         'Button10
         '
         Me.Button10.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button10.Location = New System.Drawing.Point(44, 115)
+        Me.Button10.Location = New System.Drawing.Point(44, 86)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(258, 23)
         Me.Button10.TabIndex = 8
@@ -214,22 +214,12 @@ Partial Class ZotDefender
         'Button9
         '
         Me.Button9.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button9.Location = New System.Drawing.Point(44, 86)
+        Me.Button9.Location = New System.Drawing.Point(44, 57)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(258, 23)
         Me.Button9.TabIndex = 7
         Me.Button9.Text = "Change All User Passwords..."
         Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button8.Location = New System.Drawing.Point(44, 57)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(258, 23)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "LDAP Quick Setup"
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -253,7 +243,7 @@ Partial Class ZotDefender
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button6.Location = New System.Drawing.Point(43, 267)
+        Me.Button6.Location = New System.Drawing.Point(44, 300)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(258, 23)
         Me.Button6.TabIndex = 3
@@ -263,7 +253,7 @@ Partial Class ZotDefender
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button5.Location = New System.Drawing.Point(43, 238)
+        Me.Button5.Location = New System.Drawing.Point(44, 271)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(258, 23)
         Me.Button5.TabIndex = 2
@@ -273,7 +263,7 @@ Partial Class ZotDefender
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(153, 193)
+        Me.Label7.Location = New System.Drawing.Point(154, 226)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 13)
         Me.Label7.TabIndex = 1
@@ -282,7 +272,7 @@ Partial Class ZotDefender
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button4.Location = New System.Drawing.Point(43, 209)
+        Me.Button4.Location = New System.Drawing.Point(44, 242)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(258, 23)
         Me.Button4.TabIndex = 0
@@ -381,6 +371,16 @@ Partial Class ZotDefender
         '
         Me.EventLog2.SynchronizingObject = Me
         '
+        'Button15
+        '
+        Me.Button15.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.Button15.Location = New System.Drawing.Point(44, 144)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(258, 23)
+        Me.Button15.TabIndex = 10
+        Me.Button15.Text = "Remove Vulnerable Programs"
+        Me.Button15.UseVisualStyleBackColor = False
+        '
         'ZotDefender
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -391,14 +391,14 @@ Partial Class ZotDefender
         Me.Name = "ZotDefender"
         Me.Text = "ZotDefender"
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
+        Me.TabPage3.PerformLayout
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
+        Me.TabPage2.PerformLayout
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.Panel2.PerformLayout
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.Panel1.PerformLayout
         Me.TabControl1.ResumeLayout(False)
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EventLog2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -426,7 +426,6 @@ Partial Class ZotDefender
     Friend WithEvents Button11 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button14 As Button
     Friend WithEvents TextBox8 As TextBox
@@ -440,4 +439,5 @@ Partial Class ZotDefender
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents EventLog2 As EventLog
     Protected WithEvents TabPage2 As TabPage
+    Friend WithEvents Button15 As Button
 End Class

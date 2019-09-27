@@ -59,3 +59,6 @@
 
 $nonNativeProcesses = Get-Process | Where-Object -Property ProcessName -NotIn $filterList
 $nonNativeProcesses
+Write-Host ' '
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');

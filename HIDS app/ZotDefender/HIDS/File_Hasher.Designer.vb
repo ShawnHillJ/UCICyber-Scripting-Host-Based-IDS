@@ -49,6 +49,8 @@ Partial Class Form2
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -396,4 +398,6 @@ Partial Class Form2
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

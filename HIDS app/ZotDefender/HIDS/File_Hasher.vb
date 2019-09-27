@@ -50,15 +50,44 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim input_file As String
-        Dim output_file As String
-        Dim recursive_argument As String = "-r "
-        Dim max_files_argument As String = "-m "
-        Dim algorithm_argument As String = "-a "
+
+        If TextBox1.Text = "" Then
+            MsgBox("No Input Folder Specified!")
+            Return
+        End If
+
+        If TextBox2.Text = "" Then
+            MsgBox("No Output File Specified!")
+            Return
+        End If
+
+        If ComboBox1.SelectedText = "Select Hashing Algorithm..." Then
+            MsgBox("No Algorithm Specified!")
+            Return
+        End If
+
+
+        Dim input_file As String = " -p " + TextBox1.Text
+        Dim output_file As String = " -n " + TextBox2.Text
+        Dim recursive_argument As String
+        Dim max_files_argument As String
+        Dim algorithm_argument As String = " -a " + ComboBox1.SelectedText
 
 
 
-        Execute_Command("powershell " + "")
+        If CheckBox1.Checked Then
+            recursive_argument = " -r " + IIf(RadioButton6.Checked, "true", CStr(NumericUpDown3.Value))
+        Else
+            recursive_argument = ""
+        End If
+
+        If CheckBox2.Checked Then
+            max_files_argument = " -m " + CStr(NumericUpDown2.Value)
+        Else
+            max_files_argument = ""
+        End If
+
+        Execute_Command("powershell C:\Blue_Team\File_hasher.ps1 " + input_file + output_file + recursive_argument + max_files_argument + algorithm_argument)
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -80,4 +109,15 @@
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
         NumericUpDown2.Enabled = CheckBox2.Checked
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        FolderBrowserDialog1.ShowDialog()
+        TextBox1.Text = FolderBrowserDialog1.SelectedPath
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        SaveFileDialog1.ShowDialog()
+        TextBox2.Text = SaveFileDialog1.FileName
+    End Sub
+
 End Class

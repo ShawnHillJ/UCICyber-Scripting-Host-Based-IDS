@@ -37,3 +37,6 @@ foreach ($name in $names)
 
 #Show the list of programs with version and date installed in alphabetical order
 $programList | Sort-Object | Format-Table -AutoSize
+
+Write-Host -NoNewLine 'Press any key to continue...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');

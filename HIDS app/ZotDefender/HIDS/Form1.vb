@@ -41,13 +41,13 @@ Public Class ZotDefender
 
         'Specify the parts for the processinfo object we made
         With psi
-            .UseShellExecute = False
-            .RedirectStandardError = True
-            .RedirectStandardOutput = True
-            .RedirectStandardInput = True
+            '.UseShellExecute = False
+            '.RedirectStandardError = True
+            '.RedirectStandardOutput = True
+            '.RedirectStandardInput = True
             .CreateNoWindow = False
-            .StandardOutputEncoding = systemencoding
-            .StandardErrorEncoding = systemencoding
+            '.StandardOutputEncoding = systemencoding
+            '.StandardErrorEncoding = systemencoding
         End With
 
         'Create the new process to execute commands using the processinfo object

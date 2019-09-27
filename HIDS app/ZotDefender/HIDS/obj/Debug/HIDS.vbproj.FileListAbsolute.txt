@@ -11,3 +11,7 @@ C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debu
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.pdb
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.Form2.resources
 C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.connform.resources
+C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\HIDS.exe.manifest
+C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\bin\Debug\HIDS.application
+C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.exe.manifest
+C:\Users\Devastator\Documents\git\ZotDefender\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.application

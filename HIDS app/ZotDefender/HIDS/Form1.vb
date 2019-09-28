@@ -286,4 +286,9 @@ Public Class ZotDefender
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
 
     End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        FolderBrowserDialog1.ShowDialog()
+        TextBox8.AppendText(FolderBrowserDialog1.SelectedPath)
+    End Sub
 End Class

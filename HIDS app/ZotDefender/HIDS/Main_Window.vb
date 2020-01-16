@@ -18,6 +18,9 @@ Public Class ZotDefender
     Private Delegate Sub InvokeWithString(ByVal text As String)
     Private display_output As String
 
+    Private inventory_data As DataTable
+
+
     Private Sub Execute_Command(ByVal command As String)
 
         'Close the cmd prompt if already opened previously by this function
@@ -119,7 +122,8 @@ Public Class ZotDefender
     End Sub
 
     Private Sub ZotDefender_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        inventory_data = New DataTable
+        DataGridView1.DataSource = inventory_data
     End Sub
 
     Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
@@ -286,4 +290,34 @@ Public Class ZotDefender
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
 
     End Sub
+
+    Private Sub EportAsCSVButton_Click(sender As Object, e As EventArgs) Handles EportAsCSVButton.Click
+
+        'Get the file location to save the csv file
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.ShowDialog()
+
+        'Generate the CSV string to save
+
+        Dim csv_export_file As String = String.Empty
+        For Each column As DataGridViewColumn In DataGridView1.Columns
+            csv_export_file = csv_export_file & column.HeaderText & ","
+        Next
+        csv_export_file = csv_export_file.TrimEnd(",")
+        csv_export_file = csv_export_file & vbCr & vbLf
+
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            For Each cell As DataGridViewCell In row.Cells
+                csv_export_file = csv_export_file & cell.FormattedValue & ","
+            Next
+            csv_export_file = csv_export_file & vbCr & vbLf
+        Next
+
+        'Save the CSV file
+        System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
+
+    End Sub
+
+
+
 End Class

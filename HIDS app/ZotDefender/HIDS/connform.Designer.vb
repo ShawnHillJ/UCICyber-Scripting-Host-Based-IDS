@@ -22,8 +22,7 @@ Partial Class connform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -39,28 +38,15 @@ Partial Class connform
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(42, 442)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(52, 105)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(179, 342)
-        Me.ListBox1.TabIndex = 1
         '
         'Button1
         '
@@ -88,7 +74,7 @@ Partial Class connform
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(545, 342)
+        Me.DataGridView1.Size = New System.Drawing.Size(545, 409)
         Me.DataGridView1.TabIndex = 0
         '
         'Status
@@ -150,10 +136,9 @@ Partial Class connform
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.ListBox1)
         Me.Panel1.Location = New System.Drawing.Point(257, 43)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(545, 342)
+        Me.Panel1.Size = New System.Drawing.Size(545, 409)
         Me.Panel1.TabIndex = 5
         '
         'Panel2
@@ -180,17 +165,60 @@ Partial Class connform
         Me.ListBox2.Size = New System.Drawing.Size(179, 316)
         Me.ListBox2.TabIndex = 0
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(42, 459)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(179, 23)
+        Me.Button3.TabIndex = 7
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(42, 429)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(146, 429)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(257, 464)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 10
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'connform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(846, 530)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Name = "connform"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -201,9 +229,6 @@ Partial Class connform
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents DataGridView1 As DataGridView
@@ -219,4 +244,9 @@ Partial Class connform
     Friend WithEvents Panel2 As Panel
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button5 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

@@ -218,6 +218,9 @@ Public Class ZotDefender
         'MsgBox(display_output)
 
         'Write contents to file specified earlier
+        If destination = "" Then
+            Return
+        End If
         Dim file As System.IO.StreamWriter
         file = My.Computer.FileSystem.OpenTextFileWriter(destination, False)
         For Each line As String In display_output.Split("\r\n")
@@ -286,6 +289,10 @@ Public Class ZotDefender
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         Execute_Command("powershell C:\Blue_Team\Remove-Vulnerable-Programs.psm1")
     End Sub
+    Private Sub Button15_MouseOver(sender As Object, e As EventArgs) Handles Button15.MouseHover
+        TextBox7.Text = ""
+    End Sub
+
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
 
@@ -317,7 +324,9 @@ Public Class ZotDefender
         System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
 
     End Sub
-
-
+    '   Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+    '       FolderBrowserDialog1.ShowDialog()
+    '       TextBox8.AppendText(FolderBrowserDialog1.SelectedPath)
+    '   End Sub
 
 End Class

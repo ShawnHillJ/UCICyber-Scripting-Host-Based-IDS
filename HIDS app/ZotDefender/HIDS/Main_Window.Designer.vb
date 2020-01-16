@@ -59,11 +59,18 @@ Partial Class ZotDefender
         Me.EventLog1 = New System.Diagnostics.EventLog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.EventLog2 = New System.Diagnostics.EventLog()
+<<<<<<< HEAD:HIDS app/ZotDefender/HIDS/Main_Window.Designer.vb
+=======
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925:HIDS app/ZotDefender/HIDS/Form1.Designer.vb
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+<<<<<<< HEAD:HIDS app/ZotDefender/HIDS/Main_Window.Designer.vb
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925:HIDS app/ZotDefender/HIDS/Form1.Designer.vb
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,10 +214,16 @@ Partial Class ZotDefender
         'Button15
         '
         Me.Button15.BackColor = System.Drawing.Color.LightGoldenrodYellow
+<<<<<<< HEAD:HIDS app/ZotDefender/HIDS/Main_Window.Designer.vb
         Me.Button15.Location = New System.Drawing.Point(59, 177)
         Me.Button15.Margin = New System.Windows.Forms.Padding(4)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(344, 28)
+=======
+        Me.Button15.Location = New System.Drawing.Point(44, 144)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(258, 23)
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925:HIDS app/ZotDefender/HIDS/Form1.Designer.vb
         Me.Button15.TabIndex = 10
         Me.Button15.Text = "Remove Vulnerable Programs"
         Me.Button15.UseVisualStyleBackColor = False
@@ -484,5 +497,9 @@ Partial Class ZotDefender
     Friend WithEvents EventLog2 As EventLog
     Protected WithEvents TabPage2 As TabPage
     Friend WithEvents Button15 As Button
+<<<<<<< HEAD:HIDS app/ZotDefender/HIDS/Main_Window.Designer.vb
     Friend WithEvents DataGridView1 As DataGridView
+=======
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925:HIDS app/ZotDefender/HIDS/Form1.Designer.vb
 End Class

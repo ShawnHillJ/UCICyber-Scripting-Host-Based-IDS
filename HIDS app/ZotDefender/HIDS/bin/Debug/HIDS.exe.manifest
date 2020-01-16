@@ -42,14 +42,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HIDS.exe" size="57296">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HIDS.exe" size="57808">
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925
       <assemblyIdentity name="HIDS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<<<<<<< HEAD
         <dsig:DigestValue>QSQEJvQuvZrJ+Xqhc5y+T5nh3jQ=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>SJgUzacZeDpF16Lil9nGdwge8u0=</dsig:DigestValue>
+>>>>>>> 9eda3308f0677b6d5741abe5227e71821783a925
       </hash>
     </dependentAssembly>
   </dependency>

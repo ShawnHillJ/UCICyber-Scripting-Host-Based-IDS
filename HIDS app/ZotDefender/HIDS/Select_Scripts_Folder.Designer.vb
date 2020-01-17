@@ -76,6 +76,7 @@ Partial Class Select_Scripts_Folder
         Me.MinimizeBox = False
         Me.Name = "Select_Scripts_Folder"
         Me.Text = "Form1"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

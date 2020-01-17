@@ -10,7 +10,6 @@ Imports System.Collections.ObjectModel
 
 Public Class ZotDefender
 
-
     'Initialize globals to use in process calls
     Private psi As ProcessStartInfo
     Private cmd As Process
@@ -20,7 +19,6 @@ Public Class ZotDefender
 
     Private inventory_data As DataTable
     Public Scripts_Path As String = System.Environment.ExpandEnvironmentVariables("%USERPROFILE%") & "\Desktop\"
-
 
     Private Sub Execute_Command(ByVal command As String)
 
@@ -62,7 +60,6 @@ Public Class ZotDefender
         cmd.Start()
         'cmd.BeginOutputReadLine()
         'cmd.BeginErrorReadLine()
-
     End Sub
 
 
@@ -124,55 +121,14 @@ Public Class ZotDefender
     Private Sub ZotDefender_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         inventory_data = New DataTable
         DataGridView1.DataSource = inventory_data
+        Me.Enabled = False
         Select_Scripts_Folder.Show()
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub MaskedTextBox1_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
-
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub InventoryButton_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Execute_Script_and_Output_String("powershell C:\Users\Devastator\Documents\git\ZotDefender\Windows\Inventory\Get_Inventory.ps1", TextBox6)
-
-
-
-
-    End Sub
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
+        Execute_Script_and_Output_String("powershell " & Scripts_Path & "Get_Inventory.ps1", TextBox6)
 
     End Sub
 
@@ -200,14 +156,6 @@ Public Class ZotDefender
         TextBox7.Text = "Opens the Event Viewer."
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
         'Call the SaveFileDialog to get file destination
@@ -233,10 +181,6 @@ Public Class ZotDefender
         file.Close()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Form2.Show()
 
@@ -245,8 +189,6 @@ Public Class ZotDefender
 
     Private Sub Button7_MouseOver(sender As Object, e As EventArgs) Handles Button7.MouseHover
         TextBox7.Text = "Opens an interactive powershell prompt to grab file hashes"
-
-
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -254,20 +196,12 @@ Public Class ZotDefender
     End Sub
 
 
-    Private Sub EventLog2_EntryWritten(sender As Object, e As EntryWrittenEventArgs) Handles EventLog2.EntryWritten
-
-    End Sub
-
-    Private Sub Button8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Button8_MouseOver(sender As Object, e As EventArgs)
         TextBox7.Text = "Launches the GUI setup to create an instance of an LDAP Server. Only works on Windows Server."
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Execute_Command("powershell C:\Blue_Team\Change-All-User-Passwords.ps1")
+        Execute_Command("powershell " & Scripts_Path & "\Change-All-User-Passwords.ps1")
     End Sub
 
     Private Sub Button9_MouseOver(sender As Object, e As EventArgs) Handles Button9.MouseHover
@@ -275,7 +209,7 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Execute_Command("powershell C:\Blue_Team\Get-NonNative-Process.ps1")
+        Execute_Command("powershell " & Scripts_Path & "Get-NonNative-Process.ps1")
     End Sub
 
     Private Sub Button10_MouseOver(sender As Object, e As EventArgs) Handles Button10.MouseHover
@@ -283,7 +217,7 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        Execute_Command("powershell C:\Blue_Team\Get-Installed-Programs.ps1")
+        Execute_Command("powershell " & Scripts_Path & "Get-Installed-Programs.ps1")
     End Sub
 
     Private Sub Button11_MouseOver(sender As Object, e As EventArgs) Handles Button11.MouseHover
@@ -291,16 +225,12 @@ Public Class ZotDefender
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Execute_Command("powershell C:\Blue_Team\Remove-Vulnerable-Programs.psm1")
+        Execute_Command("powershell " & Scripts_Path & "Remove-Vulnerable-Programs.psm1")
     End Sub
     Private Sub Button15_MouseOver(sender As Object, e As EventArgs) Handles Button15.MouseHover
         TextBox7.Text = ""
     End Sub
 
-
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-
-    End Sub
 
     Private Sub EportAsCSVButton_Click(sender As Object, e As EventArgs) Handles EportAsCSVButton.Click
 
@@ -327,6 +257,64 @@ Public Class ZotDefender
         'Save the CSV file
         System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
 
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        inventory_data = New DataTable
+        DataGridView1.DataSource = inventory_data
+
+        Dim column As DataColumn
+        Dim row As DataRow
+
+        Dim output_str As String = TextBox6.Text
+        output_str = output_str.TrimStart(vbCrLf)
+        'output_str = output_str.Remove(0, 20)
+
+
+        Dim host_name As String = ""
+        Dim os_type As String = output_str
+        Dim os_config As String = ""
+        Dim ip_address As String = ""
+        Dim dc_name As String = ""
+
+        column = New DataColumn
+        column.DataType = System.Type.GetType("System.String")
+        column.ColumnName = "Property"
+        column.ReadOnly = True
+        column.Unique = True
+        inventory_data.Columns.Add(column)
+
+        column = New DataColumn
+        column.DataType = System.Type.GetType("System.String")
+        column.ColumnName = "Value"
+        column.ReadOnly = True
+        column.Unique = False
+        inventory_data.Columns.Add(column)
+
+        row = inventory_data.NewRow()
+        row("Property") = "Host Name"
+        row("Value") = host_name
+        inventory_data.Rows.Add(row)
+
+        row = inventory_data.NewRow()
+        row("Property") = "OS Type"
+        row("Value") = os_type
+        inventory_data.Rows.Add(row)
+
+        row = inventory_data.NewRow()
+        row("Property") = "OS Config"
+        row("Value") = os_config
+        inventory_data.Rows.Add(row)
+
+        row = inventory_data.NewRow()
+        row("Property") = "IP Address"
+        row("Value") = ip_address
+        inventory_data.Rows.Add(row)
+
+        row = inventory_data.NewRow()
+        row("Property") = "Domain Controller"
+        row("Value") = dc_name
+        inventory_data.Rows.Add(row)
     End Sub
 
 

@@ -386,6 +386,7 @@ Partial Class ZotDefender
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Multiline = True
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
         Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox6.Size = New System.Drawing.Size(427, 285)
         Me.TextBox6.TabIndex = 8
@@ -412,9 +413,6 @@ Partial Class ZotDefender
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1069, 539)
         Me.TabControl1.TabIndex = 0
-        '
-        'ToolTip1
-        '
         '
         'EventLog1
         '

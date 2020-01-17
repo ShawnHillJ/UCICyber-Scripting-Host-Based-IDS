@@ -103,6 +103,12 @@
     <Compile Include="connform.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Select_Scripts_Folder.Designer.vb">
+      <DependentUpon>Select_Scripts_Folder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Scripts_Folder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main_Window.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="File_Hasher.resx">
       <DependentUpon>File_Hasher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Scripts_Folder.resx">
+      <DependentUpon>Select_Scripts_Folder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Window.resx">
       <DependentUpon>Main_Window.vb</DependentUpon>

@@ -19,6 +19,7 @@ Public Class ZotDefender
     Private display_output As String
 
     Private inventory_data As DataTable
+    Public Scripts_Path As String = System.Environment.ExpandEnvironmentVariables("%USERPROFILE%") & "\Desktop\"
 
 
     Private Sub Execute_Command(ByVal command As String)
@@ -28,7 +29,6 @@ Public Class ZotDefender
             cmd.Kill()
         Catch ex As Exception
         End Try
-
 
         'Create a processinfo thing to feed to a new process
         'Use the contents of `command` as the command to execute
@@ -124,6 +124,7 @@ Public Class ZotDefender
     Private Sub ZotDefender_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         inventory_data = New DataTable
         DataGridView1.DataSource = inventory_data
+        Select_Scripts_Folder.Show()
     End Sub
 
     Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
@@ -154,9 +155,12 @@ Public Class ZotDefender
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub InventoryButton_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Execute_Script_and_Output_String("powershell C:\Users\Devastator\Documents\git\ZotDefender\Windows\Inventory\Get_Inventory.ps1", TextBox6)
+
+
+
 
     End Sub
 
@@ -324,6 +328,8 @@ Public Class ZotDefender
         System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
 
     End Sub
+
+
     '   Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
     '       FolderBrowserDialog1.ShowDialog()
     '       TextBox8.AppendText(FolderBrowserDialog1.SelectedPath)

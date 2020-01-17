@@ -32,3 +32,4 @@ C:\Users\Shawn\Documents\UCICyber-Scripting-Host-Based-IDS\HIDS app\ZotDefender\
 C:\Users\Shawn\Documents\UCICyber-Scripting-Host-Based-IDS\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.exe
 C:\Users\Shawn\Documents\UCICyber-Scripting-Host-Based-IDS\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.xml
 C:\Users\Shawn\Documents\UCICyber-Scripting-Host-Based-IDS\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.pdb
+C:\Users\Shawn\Documents\UCICyber-Scripting-Host-Based-IDS\HIDS app\ZotDefender\HIDS\obj\Debug\HIDS.Select_Scripts_Folder.resources

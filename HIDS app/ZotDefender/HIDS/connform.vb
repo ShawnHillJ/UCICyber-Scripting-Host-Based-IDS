@@ -5,7 +5,7 @@ Imports System.Timers
 Public Class connform
 
     'declear global path variables
-    Private ReadOnly log_dir As String = ZotDefender.FolderBrowserDialog1.SelectedPath
+    Public ReadOnly log_dir As String = ZotDefender.FolderBrowserDialog1.SelectedPath
     Private ReadOnly lfilep As String = log_dir + "\log.txt"
     Private ReadOnly slfilep As String = log_dir + "\session.txt"
     Private ReadOnly bfilep As String = log_dir + "\list.txt"
@@ -172,4 +172,6 @@ Public Class connform
         End If
 
     End Sub
+
+
 End Class

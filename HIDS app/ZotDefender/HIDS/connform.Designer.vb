@@ -50,18 +50,20 @@ Partial Class connform
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(42, 400)
+        Me.Button1.Location = New System.Drawing.Point(56, 492)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(146, 400)
+        Me.Button2.Location = New System.Drawing.Point(195, 492)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
@@ -73,112 +75,129 @@ Partial Class connform
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Status, Me.logdate, Me.Source, Me.srcport, Me.destination, Me.destport, Me.state, Me.pid})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(545, 409)
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(727, 503)
         Me.DataGridView1.TabIndex = 0
         '
         'Status
         '
         Me.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Status.HeaderText = "Status"
+        Me.Status.MinimumWidth = 6
         Me.Status.Name = "Status"
-        Me.Status.Width = 62
+        Me.Status.Width = 77
         '
         'logdate
         '
         Me.logdate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.logdate.HeaderText = "Date"
+        Me.logdate.MinimumWidth = 6
         Me.logdate.Name = "logdate"
-        Me.logdate.Width = 55
+        Me.logdate.Width = 67
         '
         'Source
         '
         Me.Source.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.Source.HeaderText = "Source"
+        Me.Source.MinimumWidth = 6
         Me.Source.Name = "Source"
-        Me.Source.Width = 66
+        Me.Source.Width = 82
         '
         'srcport
         '
         Me.srcport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.srcport.HeaderText = "Port"
+        Me.srcport.MinimumWidth = 6
         Me.srcport.Name = "srcport"
-        Me.srcport.Width = 51
+        Me.srcport.Width = 63
         '
         'destination
         '
         Me.destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.destination.HeaderText = "Destination"
+        Me.destination.MinimumWidth = 6
         Me.destination.Name = "destination"
-        Me.destination.Width = 85
+        Me.destination.Width = 108
         '
         'destport
         '
         Me.destport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.destport.HeaderText = "Port"
+        Me.destport.MinimumWidth = 6
         Me.destport.Name = "destport"
-        Me.destport.Width = 51
+        Me.destport.Width = 63
         '
         'state
         '
         Me.state.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.state.HeaderText = "State"
+        Me.state.MinimumWidth = 6
         Me.state.Name = "state"
-        Me.state.Width = 57
+        Me.state.Width = 70
         '
         'pid
         '
         Me.pid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.pid.HeaderText = "PID"
+        Me.pid.MinimumWidth = 6
         Me.pid.Name = "pid"
-        Me.pid.Width = 50
+        Me.pid.Width = 59
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(257, 43)
+        Me.Panel1.Location = New System.Drawing.Point(343, 53)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(545, 409)
+        Me.Panel1.Size = New System.Drawing.Size(727, 503)
         Me.Panel1.TabIndex = 5
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.ListBox2)
-        Me.Panel2.Location = New System.Drawing.Point(42, 43)
+        Me.Panel2.Location = New System.Drawing.Point(56, 53)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(179, 342)
+        Me.Panel2.Size = New System.Drawing.Size(239, 421)
         Me.Panel2.TabIndex = 6
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(237, 22)
         Me.TextBox1.TabIndex = 1
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(0, 23)
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(0, 28)
+        Me.ListBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(179, 316)
+        Me.ListBox2.Size = New System.Drawing.Size(237, 388)
         Me.ListBox2.TabIndex = 0
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(42, 459)
+        Me.Button3.Location = New System.Drawing.Point(56, 565)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(179, 23)
+        Me.Button3.Size = New System.Drawing.Size(239, 28)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(42, 429)
+        Me.Button4.Location = New System.Drawing.Point(56, 528)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(100, 28)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
@@ -188,9 +207,10 @@ Partial Class connform
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(146, 429)
+        Me.Button5.Location = New System.Drawing.Point(195, 528)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(100, 28)
         Me.Button5.TabIndex = 9
         Me.Button5.Text = "Button5"
         Me.Button5.UseVisualStyleBackColor = True
@@ -198,19 +218,20 @@ Partial Class connform
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(257, 464)
+        Me.CheckBox1.Location = New System.Drawing.Point(343, 571)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
         Me.CheckBox1.TabIndex = 10
         Me.CheckBox1.Text = "CheckBox1"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'connform
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(846, 530)
+        Me.ClientSize = New System.Drawing.Size(1128, 652)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -219,6 +240,7 @@ Partial Class connform
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "connform"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

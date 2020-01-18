@@ -125,7 +125,6 @@ Public Class ZotDefender
         Select_Scripts_Folder.Show()
     End Sub
 
-
     Private Sub InventoryButton_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Execute_Script_and_Output_String("powershell " & Scripts_Path & "Get_Inventory.ps1", TextBox6)
@@ -183,7 +182,6 @@ Public Class ZotDefender
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Form2.Show()
-
         'Execute_Command("powershell C:\Users\Devastator\Documents\git\ZotDefender\File_hasher.ps1")
     End Sub
 
@@ -255,7 +253,10 @@ Public Class ZotDefender
         Next
 
         'Save the CSV file
-        System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
+        Try
+            System.IO.File.WriteAllText(SaveFileDialog1.FileName, csv_export_file)
+        Catch ex As Exception
+        End Try
 
     End Sub
 
@@ -267,7 +268,7 @@ Public Class ZotDefender
         Dim row As DataRow
 
         Dim output_str As String = TextBox6.Text
-        output_str = output_str.TrimStart(vbCrLf)
+        output_str = output_str.TrimStart(Constants.vbCrLf)
         'output_str = output_str.Remove(0, 20)
 
 
@@ -315,6 +316,11 @@ Public Class ZotDefender
         row("Property") = "Domain Controller"
         row("Value") = dc_name
         inventory_data.Rows.Add(row)
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        FolderBrowserDialog1.ShowDialog()
+        TextBox8.Text = FolderBrowserDialog1.SelectedPath
     End Sub
 
 
